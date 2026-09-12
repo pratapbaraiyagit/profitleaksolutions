@@ -1,0 +1,73 @@
+.explanationSection {
+  background-color: var(--color-white);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.title {
+  margin-bottom: var(--space-md);
+  color: var(--color-primary-navy);
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-md);
+}
+
+.visualGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.leakItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: var(--color-neutral-50);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-neutral-200);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.leakItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border-color: var(--color-neutral-300);
+}
+
+.iconWrapper {
+  color: var(--color-accent-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(13, 148, 136, 0.1);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.leakText {
+  font-weight: 500;
+  color: var(--color-primary-navy);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .visualGrid {
+    grid-template-columns: 1fr;
+  }
+}

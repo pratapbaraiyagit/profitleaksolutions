@@ -1,0 +1,80 @@
+.footer {
+  background-color: var(--color-primary-navy);
+  color: var(--color-white);
+  padding-top: var(--space-xl);
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.logo {
+  display: block;
+  text-decoration: none;
+  margin-bottom: var(--space-sm);
+}
+
+.logoImage {
+  height: 48px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.tagline {
+  color: var(--color-neutral-300);
+  font-size: 1rem;
+}
+
+.footerHeading {
+  color: var(--color-white);
+  font-size: 1.125rem;
+  margin-bottom: var(--space-md);
+}
+
+.navCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.navCol a {
+  color: var(--color-neutral-300);
+  transition: color 0.2s ease;
+}
+
+.navCol a:hover {
+  color: var(--color-accent-teal);
+}
+
+.footerContact p {
+  color: var(--color-neutral-300);
+  font-size: 1rem;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-md) 0;
+}
+
+.bottomContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.bottomContainer p {
+  color: var(--color-neutral-300);
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}

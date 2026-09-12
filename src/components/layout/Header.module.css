@@ -1,0 +1,88 @@
+.header {
+  height: var(--header-height);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-neutral-200);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImage {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--color-neutral-600);
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--color-primary-navy);
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-primary-navy);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: var(--space-md);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--color-neutral-200);
+  }
+
+  .desktopNav.mobileNavOpen {
+    display: flex;
+  }
+  
+  .desktopNav .navLink {
+    padding: var(--space-sm) 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-neutral-100);
+  }
+
+  .desktopNav .btn {
+    margin-top: var(--space-sm);
+  }
+  
+  .mobileMenuBtn {
+    display: block;
+    z-index: 101;
+  }
+}
