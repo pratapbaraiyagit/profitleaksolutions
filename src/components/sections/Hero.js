@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import styles from './Hero.module.css';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import styles from './Hero.module.css';
 
 export default function Hero() {
   return (
@@ -15,8 +16,7 @@ export default function Hero() {
           </p>
           <div className={styles.actions}>
             <Link href="#contact" className="btn btn-primary">
-              Request a Diagnostic
-              <ArrowRight className={styles.icon} size={20} />
+              Request a Diagnostic <ArrowRight size={20} className={styles.icon} />
             </Link>
             <Link href="#services" className={styles.secondaryLink}>
               Explore Our Approach
@@ -25,10 +25,12 @@ export default function Hero() {
         </div>
         
         <div className={`${styles.heroImageWrapper} fade-in delay-200`}>
-          <img 
+          <Image 
             src="https://profitleaksolutions.com/wp-content/uploads/2026/01/Website-Hero-Image-3.png"
             alt="Business Professional"
+            fill
             className={styles.heroImage}
+            priority
           />
         </div>
       </div>

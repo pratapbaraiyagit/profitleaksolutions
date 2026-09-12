@@ -1,11 +1,12 @@
 import styles from './WhyUs.module.css';
 import { CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
 
 const reasons = [
-  "Proven experience in high-pressure competitive environments",
-  "Direct, honest, and actionable guidance",
-  "Track record of improving customer experience and retention",
-  "Practical ability to diagnose and repair operational issues"
+  "Stop guessing and start working with clear, factual data.",
+  "No theoretical jargon, just practical guidance.",
+  "Tailored execution strategy unique to your exact operations and team.",
+  "Maximization of your resources to prevent future leaks."
 ];
 
 export default function WhyUs() {
@@ -13,10 +14,13 @@ export default function WhyUs() {
     <section className={`section ${styles.whyUsSection}`}>
       <div className={`container ${styles.container}`}>
         <div className={styles.imageCol}>
-          <img
+          <Image
             src="https://profitleaksolutions.com/wp-content/uploads/2026/01/Messy-Desk-1024x683.png"
             alt="Why Profit Leak Solutions"
+            width={1024}
+            height={683}
             className={styles.whyUsImage}
+            sizes="(max-width: 992px) 100vw, 50vw"
           />
         </div>
         

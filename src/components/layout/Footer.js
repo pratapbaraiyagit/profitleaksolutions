@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -9,9 +10,11 @@ export default function Footer() {
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.footerBrand}>
           <Link href="/" className={styles.logo}>
-            <img 
+            <Image 
               src="https://profitleaksolutions.com/wp-content/uploads/2026/04/cropped-Website-Header-Logo-Rendered-768x353.png" 
               alt="Profit Leak Solutions" 
+              width={104}
+              height={48}
               className={styles.logoImage}
             />
           </Link>

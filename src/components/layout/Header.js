@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Header.module.css';
 import { Menu, X } from 'lucide-react';
 
@@ -14,10 +15,13 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
-          <img 
+          <Image 
             src="https://profitleaksolutions.com/wp-content/uploads/2026/04/cropped-Website-Header-Logo-Rendered-768x353.png" 
             alt="Profit Leak Solutions" 
+            width={130}
+            height={60}
             className={styles.logoImage}
+            priority
           />
         </Link>
         
