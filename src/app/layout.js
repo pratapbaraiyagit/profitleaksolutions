@@ -9,9 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div style={{ overflowX: 'clip', width: '100%', maxWidth: '100vw', position: 'relative', contain: 'paint' }}>
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );
